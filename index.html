@@ -161,6 +161,49 @@
     }
     @media(max-width:420px) { .grid { grid-template-columns:1fr; } }
 
+
+    /* CADASTRO BANNER */
+    .cadastro-banner {
+      background: var(--bg2);
+      border-top: 0.5px solid rgba(201,168,76,0.15);
+      border-bottom: 0.5px solid rgba(201,168,76,0.15);
+      padding: 4rem 2.5rem;
+      text-align: center;
+    }
+    .cadastro-inner { max-width: 700px; margin: 0 auto; }
+    .cadastro-ornament { font-size: 10px; letter-spacing: 6px; color: var(--gold); text-transform: uppercase; opacity: 0.55; margin-bottom: .6rem; }
+    .cadastro-title { font-family: var(--font-display); font-size: 36px; font-weight: 300; color: var(--gold-light); letter-spacing: 2px; margin-bottom: .6rem; }
+    .cadastro-desc { font-size: 14px; color: var(--gold-light); opacity: 0.4; line-height: 1.9; margin-bottom: 2rem; }
+    .cadastro-form { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: rgba(201,168,76,0.1); }
+    .form-field { background: var(--bg); position: relative; }
+    .form-field.full { grid-column: 1 / -1; }
+    .form-field label { display: block; font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); opacity: 0.5; padding: 1rem 1.2rem 0; }
+    .form-field input, .form-field select {
+      width: 100%; background: transparent; border: none; outline: none;
+      font-family: var(--font-body); font-size: 14px; color: var(--gold-light);
+      padding: .5rem 1.2rem 1rem; opacity: 0.75;
+    }
+    .form-field select { cursor: pointer; }
+    .form-field select option { background: var(--bg2); color: var(--gold-light); }
+    .form-field input::placeholder { color: var(--gold-light); opacity: 0.25; }
+    .form-field input[type="date"]::-webkit-calendar-picker-indicator { filter: invert(0.7) sepia(1) saturate(2) hue-rotate(5deg); cursor: pointer; }
+    .cadastro-submit {
+      grid-column: 1 / -1; width: 100%; padding: 16px;
+      background: var(--gold); color: var(--bg);
+      font-family: var(--font-body); font-size: 12px; letter-spacing: 4px;
+      text-transform: uppercase; border: none; cursor: pointer; transition: opacity .2s;
+    }
+    .cadastro-submit:hover { opacity: .85; }
+    .cadastro-submit:disabled { opacity: .4; cursor: not-allowed; }
+    .cadastro-msg { margin-top: 1.2rem; font-size: 13px; letter-spacing: 1px; min-height: 20px; }
+    .cadastro-msg.ok { color: var(--gold); }
+    .cadastro-msg.err { color: #e07070; }
+    @media (max-width: 580px) {
+      .cadastro-form { grid-template-columns: 1fr; }
+      .form-field.full { grid-column: 1; }
+      .cadastro-title { font-size: 26px; }
+    }
+
     /* BOTÃO FLUTUANTE WHATSAPP */
     .wpp-float {
       position: fixed;
@@ -219,7 +262,7 @@
   <ul class="nav-links">
     <li><a onclick="go('home')">Início</a></li>
     <li><a onclick="go('catalog')">Catálogo</a></li>
-    <li><a onclick="go('about')">Loja</a></li>
+    <li><a onclick="go('about')">A Loja</a></li>
     <li><a onclick="go('contact')">Contato</a></li>
     <li>
       <div class="nav-cart" onclick="toggleCart()">
@@ -353,7 +396,66 @@
       </a>
     </div>
   </div>
-  <div class="footer-bottom">© 2026 Palazzo Perfumaria · Meia Praia, Santa Catarina · CEP 88220-000 · Todos os direitos reservados</div>
+
+  <!-- PAGAMENTO + SEGURANÇA -->
+  <div class="footer-badges">
+    <div>
+      <p class="badge-group-title">Pagamento</p>
+      <div class="payment-icons">
+        <!-- VISA -->
+        <div class="pay-badge pay-visa">VISA</div>
+        <!-- MASTERCARD -->
+        <div class="pay-badge pay-master">
+          <svg width="34" height="22" viewBox="0 0 34 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="34" height="22" rx="3" fill="white"/>
+            <circle cx="13" cy="11" r="7" fill="#EB001B"/>
+            <circle cx="21" cy="11" r="7" fill="#F79E1B"/>
+            <path d="M17 5.8a7 7 0 010 10.4A7 7 0 0117 5.8z" fill="#FF5F00"/>
+          </svg>
+        </div>
+        <!-- AMEX -->
+        <div class="pay-badge pay-amex">AMEX</div>
+        <!-- ELO -->
+        <div class="pay-badge pay-elo">elo</div>
+        <!-- DINERS -->
+        <div class="pay-badge pay-diners">DINERS<br>CLUB</div>
+        <!-- PIX -->
+        <div class="pay-badge pay-pix">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M11.354 2.646a.9.9 0 011.292 0l2.35 2.35a.5.5 0 00.353.146h1.297a1.8 1.8 0 011.8 1.8v1.297a.5.5 0 00.146.353l2.35 2.35a.9.9 0 010 1.292l-2.35 2.35a.5.5 0 00-.146.353v1.297a1.8 1.8 0 01-1.8 1.8h-1.297a.5.5 0 00-.353.146l-2.35 2.35a.9.9 0 01-1.292 0l-2.35-2.35a.5.5 0 00-.353-.146H7.354a1.8 1.8 0 01-1.8-1.8v-1.297a.5.5 0 00-.146-.353l-2.35-2.35a.9.9 0 010-1.292l2.35-2.35a.5.5 0 00.146-.353V6.942a1.8 1.8 0 011.8-1.8h1.297a.5.5 0 00.353-.146z"/></svg>
+          PIX
+        </div>
+      </div>
+      <p class="badge-note">Até 10x sem juros no cartão. Confira as regras.</p>
+    </div>
+    <div>
+      <p class="badge-group-title">Segurança</p>
+      <div class="security-icons">
+        <div class="sec-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          SITE 100%<br>SEGURO
+        </div>
+        <div class="sec-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+          SITE SEGURO<br>SSL
+        </div>
+        <div class="sec-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+          COMPRA<br>PROTEGIDA
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LEGAL -->
+  <div class="footer-legal">
+    <p class="footer-copy">
+      <strong>Copyright © 2026 PalazzoPerfumaria.com.br. Todos os direitos reservados.</strong> Todo o conteúdo do site, todas as fotos, imagens, logotipos, marcas, dizeres, som, software, conjunto imagem, layout, trade dress, aqui veiculados são de propriedade exclusiva de Michael Oliveira Palazzo. É vedada qualquer reprodução, total ou parcial, de qualquer elemento de identidade, sem expressa autorização. A violação de qualquer direito mencionado implicará na responsabilização cível e criminal nos termos da Lei. Os preços dos produtos estão sujeitos a alteração sem aviso prévio.
+    </p>
+    <p class="footer-copy">
+      A Palazzo Perfumaria se reserva o direito de corrigir qualquer possível erro de digitação ou gráfico e caso haja divergências entre os valores ofertados nos e-mails promocionais e valores do site, prevalecem as informações do site. Michael Oliveira Palazzo – CPF 330.068.348-36.
+    </p>
+  </div>
+  <div class="footer-bottom-bar">© 2026 Palazzo Perfumaria · Meia Praia, Santa Catarina · CEP 88220-000</div>
 </footer>
 
 <script>
@@ -380,7 +482,74 @@ function buildCard(p){
 }
 function renderGrid(cat){const items=cat==='all'?produtos:produtos.filter(p=>p.genero===cat);document.getElementById('grid').innerHTML=items.map(buildCard).join('');}
 function filter(cat,btn){document.querySelectorAll('.fb').forEach(b=>b.classList.remove('active'));btn.classList.add('active');renderGrid(cat);}
-function go(page){document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));document.getElementById(page+'-page').classList.add('active');window.scrollTo(0,0);if(page==='catalog')renderGrid('all');}
+function go(page){document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));document.getElementById(page+'-page').classList.add('active');window.scrollTo(0,0);if(page==='catalog')renderGrid('all');
+
+  // CADASTRO — Google Sheets via Apps Script
+  const APPS_SCRIPT_URL = "https://script.google.com/macros/s/SEU_ID_AQUI/exec";
+
+  function showCadastro() {
+    const sec = document.getElementById('cadastro-section');
+    if (sec) sec.style.display = 'block';
+  }
+
+  // Mostrar seção em todas as páginas ao navegar
+  const _go = go;
+  go = function(page) {
+    _go(page);
+    showCadastro();
+  };
+
+  // Mostrar na carga inicial
+  document.addEventListener('DOMContentLoaded', showCadastro);
+  showCadastro();
+
+  async function enviarCadastro() {
+    const nome = document.getElementById('cad-nome').value.trim();
+    const email = document.getElementById('cad-email').value.trim();
+    const wpp = document.getElementById('cad-wpp').value.trim();
+    const sexo = document.getElementById('cad-sexo').value;
+    const aniv = document.getElementById('cad-aniversario').value;
+    const msg = document.getElementById('cad-msg');
+    const btn = document.getElementById('cad-btn');
+
+    if (!nome || !email || !wpp) {
+      msg.textContent = 'Por favor, preencha nome, e-mail e WhatsApp.';
+      msg.className = 'cadastro-msg err';
+      return;
+    }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      msg.textContent = 'E-mail inválido.';
+      msg.className = 'cadastro-msg err';
+      return;
+    }
+
+    btn.disabled = true;
+    btn.textContent = 'Enviando...';
+    msg.textContent = '';
+
+    const params = new URLSearchParams({
+      nome, email, whatsapp: wpp, sexo, aniversario: aniv,
+      data: new Date().toLocaleString('pt-BR')
+    });
+
+    try {
+      await fetch(APPS_SCRIPT_URL + '?' + params.toString(), { method: 'GET', mode: 'no-cors' });
+      msg.textContent = '✦ Cadastro realizado! Em breve você receberá nossas novidades.';
+      msg.className = 'cadastro-msg ok';
+      document.getElementById('cad-nome').value = '';
+      document.getElementById('cad-email').value = '';
+      document.getElementById('cad-wpp').value = '';
+      document.getElementById('cad-sexo').value = '';
+      document.getElementById('cad-aniversario').value = '';
+    } catch(e) {
+      msg.textContent = 'Erro ao enviar. Tente novamente.';
+      msg.className = 'cadastro-msg err';
+    }
+
+    btn.disabled = false;
+    btn.textContent = 'Cadastrar agora';
+  }
+}
 function wpp(msg){const m=msg||'Olá! Gostaria de informações sobre os perfumes da Palazzo Perfumaria.';window.open('https://wa.me/'+WPP+'?text='+encodeURIComponent(m));}
 function comprarAgora(id){const p=produtos.find(x=>x.id===id);wpp(`Olá! Quero comprar: *${p.nome}* (${p.ml}) — ${p.precoFmt}. Pode me ajudar?`);}
 function addCart(id){const p=produtos.find(x=>x.id===id);carrinho.push(p);updateCartUI();toggleCart(true);}
@@ -413,8 +582,47 @@ function enviarCarrinho(){
 renderGrid('all');
 </script>
 
+
+  <!-- CADASTRO FLUTUANTE — aparece em todas as páginas -->
+  <div id="cadastro-section" class="cadastro-banner" style="display:none;">
+    <div class="cadastro-inner">
+      <p class="cadastro-ornament">✦ &nbsp; exclusivo &nbsp; ✦</p>
+      <h2 class="cadastro-title">Receba novidades e promoções</h2>
+      <p class="cadastro-desc">Cadastre-se e seja o primeiro a saber sobre lançamentos, ofertas exclusivas e dicas do universo da perfumaria fina.</p>
+      <div class="cadastro-form" id="cadastro-form">
+        <div class="form-field full">
+          <label for="cad-nome">Nome completo</label>
+          <input type="text" id="cad-nome" placeholder="Seu nome" autocomplete="name" />
+        </div>
+        <div class="form-field">
+          <label for="cad-email">E-mail</label>
+          <input type="email" id="cad-email" placeholder="seu@email.com" autocomplete="email" />
+        </div>
+        <div class="form-field">
+          <label for="cad-wpp">WhatsApp</label>
+          <input type="tel" id="cad-wpp" placeholder="(11) 9 0000-0000" autocomplete="tel" />
+        </div>
+        <div class="form-field">
+          <label for="cad-sexo">Sexo</label>
+          <select id="cad-sexo">
+            <option value="">Selecione</option>
+            <option value="Feminino">Feminino</option>
+            <option value="Masculino">Masculino</option>
+            <option value="Prefiro não informar">Prefiro não informar</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label for="cad-aniversario">Data de aniversário</label>
+          <input type="date" id="cad-aniversario" />
+        </div>
+        <button class="cadastro-submit" id="cad-btn" onclick="enviarCadastro()">Cadastrar agora</button>
+      </div>
+      <p class="cadastro-msg" id="cad-msg"></p>
+    </div>
+  </div>
+
   <!-- BOTÃO FLUTUANTE WHATSAPP -->
-  <a class="wpp-float" href="https://wa.me/5511975838282?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Palazzo%20Perfumaria%20e%20gostaria%20de%20atendimento.%20Meu%20Nome%20é%20...%20sou%20da%20cidade%20de.." target="_blank" aria-label="Fale conosco no WhatsApp">
+  <a class="wpp-float" href="https://wa.me/5511975838282?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Palazzo%20Perfumaria%20e%20gostaria%20de%20atendimento." target="_blank" aria-label="Fale conosco no WhatsApp">
     <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
       <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
     </svg>
