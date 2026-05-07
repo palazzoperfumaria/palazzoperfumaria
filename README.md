@@ -1,4 +1,4 @@
-## Hi there 👋
+## Hi there 👋 i am Michel and studying how Github can help me on the business i do.
 
 <!--
 **palazzoperfumaria/palazzoperfumaria** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
