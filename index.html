@@ -17,7 +17,7 @@
       --font-body:'Jost',sans-serif;
     }
     html { scroll-behavior:smooth; }
-    body { font-family:var(--font-body); background:var(--bg); color:var(--gold-light); font-weight:300; overflow-x:hidden; font-size:16px; }
+    body { font-family:var(--font-body); background:var(--bg); color:var(--gold-light); font-weight:300; overflow-x:hidden; font-size:18px; }
 
     /* NAV */
     nav {
@@ -28,7 +28,7 @@
     .nav-logo { cursor:pointer; display:flex; align-items:center; }
     .nav-logo img { height:62px; width:auto; object-fit:contain; }
     .nav-links { display:flex; gap:1.8rem; list-style:none; align-items:center; }
-    .nav-links a { font-size:12px; letter-spacing:2px; color:var(--gold-light); text-decoration:none; text-transform:uppercase; opacity:0.65; cursor:pointer; transition:all .2s; }
+    .nav-links a { font-size:14px; letter-spacing:2px; color:var(--gold-light); text-decoration:none; text-transform:uppercase; opacity:0.65; cursor:pointer; transition:all .2s; }
     .nav-links a:hover { opacity:1; color:var(--gold); }
     .nav-cart { position:relative; cursor:pointer; display:flex; align-items:center; gap:7px; font-size:12px; letter-spacing:2px; text-transform:uppercase; color:var(--gold); border:0.5px solid var(--gold-dim); padding:8px 16px; opacity:0.85; transition:all .2s; }
     .nav-cart:hover { background:var(--gold); color:var(--bg); opacity:1; }
@@ -68,26 +68,28 @@
     .card-img img { width:100%; height:100%; object-fit:cover; transition:transform .4s; }
     .card:hover .card-img img { transform:scale(1.04); }
     .card-body { padding:1.6rem 1.4rem; }
-    .card-gender { font-size:11px; letter-spacing:3px; text-transform:uppercase; color:var(--gold); opacity:0.55; margin-bottom:.4rem; }
-    .card-name { font-family:var(--font-display); font-size:22px; font-weight:400; color:var(--gold-light); letter-spacing:.5px; margin-bottom:.2rem; line-height:1.2; }
-    .card-brand { font-size:12px; letter-spacing:1px; text-transform:uppercase; color:var(--gold-light); opacity:0.3; margin-bottom:.3rem; }
-    .card-ml { font-size:12px; letter-spacing:2px; text-transform:uppercase; color:var(--gold); opacity:0.45; margin-bottom:1rem; }
+    .card-gender { font-size:13px; letter-spacing:3px; text-transform:uppercase; color:var(--gold); opacity:0.55; margin-bottom:.4rem; }
+    .card-name { font-family:var(--font-display); font-size:24px; font-weight:400; color:var(--gold-light); letter-spacing:.5px; margin-bottom:.2rem; line-height:1.2; }
+    .card-brand { font-size:14px; letter-spacing:1px; text-transform:uppercase; color:var(--gold-light); opacity:0.3; margin-bottom:.3rem; }
+    .card-ml { font-size:14px; letter-spacing:2px; text-transform:uppercase; color:var(--gold); opacity:0.45; margin-bottom:1rem; }
     .card-sep { height:0.5px; background:rgba(201,168,76,0.08); margin:.8rem 0; }
-    .card-label { font-size:10px; letter-spacing:2px; text-transform:uppercase; color:var(--gold); opacity:0.4; margin-bottom:.3rem; }
-    .card-val { font-size:13px; color:var(--gold-light); opacity:0.5; line-height:1.8; margin-bottom:.8rem; }
-    .card-badge { display:inline-block; font-size:11px; letter-spacing:1px; padding:4px 12px; border:0.5px solid rgba(201,168,76,0.28); color:var(--gold); opacity:.75; margin-bottom:1rem; }
+    .card-label { font-size:12px; letter-spacing:2px; text-transform:uppercase; color:var(--gold); opacity:0.4; margin-bottom:.3rem; }
+    .card-val { font-size:15px; color:var(--gold-light); opacity:0.5; line-height:1.8; margin-bottom:.8rem; }
+    .card-badge { display:inline-block; font-size:13px; letter-spacing:1px; padding:4px 12px; border:0.5px solid rgba(201,168,76,0.28); color:var(--gold); opacity:.75; margin-bottom:1rem; }
     .card-badge.star { border-color:var(--gold); opacity:1; }
-    .card-dur { font-size:12px; color:var(--gold-light); opacity:0.35; margin-bottom:1rem; }
+    .card-dur { font-size:14px; color:var(--gold-light); opacity:0.35; margin-bottom:1rem; }
     .preco-row { display:flex; align-items:baseline; gap:.6rem; margin-bottom:1.1rem; }
     .preco { font-family:var(--font-display); font-size:28px; font-weight:400; color:var(--gold); }
     .preco-old { font-size:13px; color:var(--gold-light); opacity:0.25; text-decoration:line-through; }
     .btn-row { display:grid; grid-template-columns:1fr 1fr; gap:1.5px; }
-    .card-btn { padding:12px 6px; border:0.5px solid rgba(201,168,76,0.28); background:transparent; color:var(--gold); font-family:var(--font-body); font-size:11px; letter-spacing:1.5px; text-transform:uppercase; cursor:pointer; transition:all .2s; display:flex; align-items:center; justify-content:center; gap:6px; }
+    .card-btn { padding:14px 6px; border:0.5px solid rgba(201,168,76,0.28); background:transparent; color:var(--gold); font-family:var(--font-body); font-size:13px; letter-spacing:1.5px; text-transform:uppercase; cursor:pointer; transition:all .2s; display:flex; align-items:center; justify-content:center; gap:6px; }
     .card-btn:hover { background:rgba(201,168,76,0.12); }
     .card-btn.primary { background:var(--gold); color:var(--bg); border-color:var(--gold); font-weight:400; }
     .card-btn.primary:hover { opacity:.85; }
     .card-btn.lista-espera { background: transparent; color: var(--gold); border-color: var(--gold); }
     .card-btn.lista-espera:hover { background: rgba(201,168,76,0.12); }
+    .badge-encomenda { display:inline-block; font-size:12px; letter-spacing:1.5px; text-transform:uppercase; padding:3px 10px; border:0.5px solid rgba(201,168,76,0.5); color:var(--gold); opacity:.85; margin-bottom:.6rem; }
+    .entrega-nota { font-size:12px; color:var(--gold-light); opacity:0.4; text-align:center; margin-top:6px; letter-spacing:1px; }
 
     /* CART */
     .cart-overlay { position:fixed; inset:0; background:rgba(0,0,0,0.6); z-index:299; display:none; }
@@ -376,9 +378,18 @@ const produtos=[
   {id:"forbidden_love",nome:"Maison A. Forbidden Love",marca:"Maison Alhambra",ml:"30ml",genero:"unissex",preco:119,precoFmt:"R$ 119",original:"R$ 1.500",familia:"Oriental Floral",duracao:"4–6h · Moderada",notas:"Cereja Negra · Amêndoa · Rosa Turca · Jasmim · Sândalo · Baunilha",ref:"Lost Cherry — Tom Ford",badge:"95% similar · Fragrantica",star:true}
 ];
 let carrinho=[];
+const SEM_ESTOQUE = new Set(['maleka','forbidden_love','maison_vivacite']); // La Viva = maison_vivacite
 function buildCard(p){
   const g=p.genero==='feminino'?'Feminino':p.genero==='masculino'?'Masculino':'Unissex';
-  return`<div class="card"><div class="card-img"><img src="${imgs[p.id]}" alt="${p.nome}" loading="lazy"/></div><div class="card-body"><p class="card-gender">${g} · ${p.familia}</p><p class="card-name">${p.nome}</p><p class="card-brand">${p.marca}</p><p class="card-ml">${p.ml}</p><div class="card-sep"></div><p class="card-label">Notas</p><p class="card-val">${p.notas}</p><p class="card-label">Referência</p><p class="card-val">${p.ref}</p><p class="card-dur">⏱ ${p.duracao}</p><span class="card-badge${p.star?' star':''}">${p.badge}</span><div class="preco-row"><span class="preco">${p.precoFmt}</span>${p.original?`<span class="preco-old">${p.original}</span>`:''}</div><div class="btn-row"><button class="card-btn" onclick="addCart('${p.id}')"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>Adicionar</button><button class="card-btn primary" onclick="comprarAgora('${p.id}')">Comprar Agora</button></div></div></div>`;
+  const semEstoque = SEM_ESTOQUE.has(p.id);
+  const btns = semEstoque
+    ? `<div class="btn-row" style="grid-template-columns:1fr">
+        <button class="card-btn primary" onclick="encomendar('${p.id}')">Encomendar · 7 dias</button>
+       </div>
+       <p class="entrega-nota">⏱ Entrega em até 7 dias após o pagamento</p>`
+    : `<div class="btn-row"><button class="card-btn" onclick="addCart('${p.id}')"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>Adicionar</button><button class="card-btn primary" onclick="comprarAgora('${p.id}')">Comprar Agora</button></div>`;
+  const badgeEncomenda = semEstoque ? `<span class="badge-encomenda">⏳ Sob encomenda</span><br>` : '';
+  return`<div class="card"><div class="card-img"><img src="${imgs[p.id]}" alt="${p.nome}" loading="lazy"/></div><div class="card-body"><p class="card-gender">${g} · ${p.familia}</p><p class="card-name">${p.nome}</p><p class="card-brand">${p.marca}</p><p class="card-ml">${p.ml}</p><div class="card-sep"></div><p class="card-label">Notas</p><p class="card-val">${p.notas}</p><p class="card-label">Referência</p><p class="card-val">${p.ref}</p><p class="card-dur">⏱ ${p.duracao}</p><span class="card-badge${p.star?' star':''}">${p.badge}</span><div class="preco-row"><span class="preco">${p.precoFmt}</span>${p.original?`<span class="preco-old">${p.original}</span>`:''}</div>${badgeEncomenda}${btns}</div></div>`;
 }
 function renderGrid(cat){const items=cat==='all'?produtos:produtos.filter(p=>p.genero===cat);document.getElementById('grid').innerHTML=items.map(buildCard).join('');}
 function filter(cat,btn){document.querySelectorAll('.fb').forEach(b=>b.classList.remove('active'));btn.classList.add('active');renderGrid(cat);}
@@ -388,6 +399,7 @@ function listaEspera(id){
   const p = produtos.find(x => x.id === id);
   wpp(`Olá! Vi que o *${p.nome}* está na lista de espera. Quero ser avisado quando chegar!`);
 }
+function encomendar(id){const p=produtos.find(x=>x.id===id);wpp(`Olá! Quero encomendar: *${p.nome}* (${p.ml}) — ${p.precoFmt}.\n\nEntendo que a entrega é em até 7 dias após o pagamento. Pode me ajudar?`);}
 function comprarAgora(id){const p=produtos.find(x=>x.id===id);wpp(`Olá! Quero comprar: *${p.nome}* (${p.ml}) — ${p.precoFmt}. Pode me ajudar?`);}
 function addCart(id){const p=produtos.find(x=>x.id===id);carrinho.push(p);updateCartUI();toggleCart(true);}
 function removeCart(idx){carrinho.splice(idx,1);updateCartUI();}
